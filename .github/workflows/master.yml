@@ -29,8 +29,7 @@ jobs:
       - name: Update Timestamp File
         run: |
           current_time=$(date '+%Y-%m-%d %H:%M:%S')
-          future_time=$(date -d "$current_time + 7 hours" '+%Y-%m-%d %H:%M:%S')
-          echo "Đã cập nhật vào: $future_time" > TIMESTAMP.txt
+          echo "Thời gian cập nhật lần cuối: $current_time UTC+0" > TIMESTAMP.txt
 
       - name: Setup Git Configuration
         run: |
